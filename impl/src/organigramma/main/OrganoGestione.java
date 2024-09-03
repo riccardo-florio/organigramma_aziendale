@@ -1,21 +1,21 @@
-package organigramma;
+package organigramma.main;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
-public class Unita implements UnitaIF {
+public class OrganoGestione implements UnitaIF {
     private String nome;
-    private Tipologia tipologia;
+    private UnitaIF.Tipologia tipologia;
     private Map<Dipendente, String> dipendenti;
 
-    public Unita(String nome, Tipologia tipologia) {
+    public OrganoGestione(String nome, UnitaIF.Tipologia tipologia) {
         this.nome = nome;
         this.tipologia = tipologia;
         dipendenti = new HashMap<>();
     }//Costruttore
 
+    public Tipologia getTipologia() {
+        return tipologia;
+    }//getTipologia
 
     // COMPOSITE PATTERN
     @Override
@@ -26,26 +26,35 @@ public class Unita implements UnitaIF {
     @Override
     public void setNome(String nome) {
         this.nome = nome;
+        notifyObservers();
     }//setNome
 
     @Override
     public void addChild(UnitaIF unita) {
-        // Non applicabile per le foglie
+        if (!children.contains(unita)) {
+            children.add(unita);
+            notifyObservers();
+        }
     }//addChild
 
     @Override
     public void removeChild(UnitaIF unita) {
-        // Non applicabile per le foglie
+        if (children.contains(unita)) {
+            children.remove(unita);
+            notifyObservers();
+        }
     }//removeChild
 
     @Override
     public UnitaIF getChild(int i) {
-        // Non applicabile per le foglie
-        return null;
+        return children.get(i);
     }//getChild
 
+    public List<UnitaIF> getChildren() {
+        return new LinkedList<>(children);
+    }//getChildren
+
     // ITERATOR PATTERN
-    @Override
     public Iterator<UnitaIF> iterator() {
         return new DepthFirstIterator(this);
     }//iterator
@@ -53,21 +62,24 @@ public class Unita implements UnitaIF {
     // VISITOR PATTERN
     @Override
     public String accept(Visitor v) {
-        return v.visitUnita(this);
+        return v.visitOrganoGestione(this);
     }//accept
 
     // DIPENDENTI
     public void addDipendente(Dipendente d, String ruolo) {
-        if( !dipendenti.containsKey(d) || !dipendenti.get(d).equals(ruolo) )
+        if( !dipendenti.containsKey(d) || !dipendenti.get(d).equals(ruolo) ) {
             dipendenti.put(d, ruolo);
+            notifyObservers();
+        }
     }//addDipendente
 
     public void removeDipendente(Dipendente d) {
         dipendenti.remove(d);
+        notifyObservers();
     }//removeDipendente
 
     public Set<Dipendente> getDipendenti() {
         return new HashSet<>(dipendenti.keySet());
     }//getDipendenti
 
-}//Unita
+}//OrganoGestione

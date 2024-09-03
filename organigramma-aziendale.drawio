@@ -1,4 +1,4 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8" pages="6">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.8 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.8" pages="7">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Fase 1 - Pattern Composite">
     <mxGraphModel dx="724" dy="428" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -113,7 +113,7 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="XbpROUw0ri3JfSk3u6la-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;startSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="wFXLG3sIARUn2MWzjP7r-20" target="wFXLG3sIARUn2MWzjP7r-26" edge="1">
+        <mxCell id="XbpROUw0ri3JfSk3u6la-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;startArrow=diamondThin;startFill=0;startSize=12;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=open;endFill=0;" parent="1" source="wFXLG3sIARUn2MWzjP7r-20" target="wFXLG3sIARUn2MWzjP7r-26" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="412" y="407" as="sourcePoint" />
             <mxPoint x="553" y="407" as="targetPoint" />
@@ -449,7 +449,59 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="6lxobn3dyWeB6Bflv6FA-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Fase 4: Integrazione del pattern Command&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+        <mxCell id="6lxobn3dyWeB6Bflv6FA-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Fase 6: Integrazione del pattern Command&lt;/h1&gt;&lt;p&gt;Il pattern Command non è prettamente necessario ai fini del funzionamento del sistema, tuttavia possiamo sfruttarlo per gestire richieste revocabili.&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="80" y="80" width="680" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="b-7inv9fnYbKglBac_pC-1" value="" style="endArrow=block;endSize=10;endFill=0;shadow=0;strokeWidth=1;rounded=0;curved=0;edgeStyle=elbowEdgeStyle;elbow=vertical;dashed=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="b-7inv9fnYbKglBac_pC-4" target="b-7inv9fnYbKglBac_pC-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="110" y="628" as="sourcePoint" />
+            <mxPoint x="205" y="536" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b-7inv9fnYbKglBac_pC-2" value="" style="endArrow=block;endSize=10;endFill=0;shadow=0;strokeWidth=1;rounded=0;curved=0;edgeStyle=elbowEdgeStyle;elbow=vertical;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="b-7inv9fnYbKglBac_pC-5" target="b-7inv9fnYbKglBac_pC-3">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="329" y="629" as="sourcePoint" />
+            <mxPoint x="214" y="537" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b-7inv9fnYbKglBac_pC-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;UnitaIF&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;...&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="120" y="400" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="b-7inv9fnYbKglBac_pC-4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;UnitaIF&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;...&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="44.5" y="560" width="115" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-7inv9fnYbKglBac_pC-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;OrganoGestione&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;...&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="200.5" y="560" width="115" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="b-7inv9fnYbKglBac_pC-6" value="" style="endArrow=open;html=1;rounded=0;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.999;entryY=0.646;entryDx=0;entryDy=0;endFill=0;startArrow=diamond;startFill=0;startSize=12;entryPerimeter=0;" edge="1" parent="1" source="b-7inv9fnYbKglBac_pC-5" target="b-7inv9fnYbKglBac_pC-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="379" y="600" as="sourcePoint" />
+            <mxPoint x="310" y="465" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="287" y="445" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b-7inv9fnYbKglBac_pC-7" value="children" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="b-7inv9fnYbKglBac_pC-6">
+          <mxGeometry x="-0.7207" y="-1" relative="1" as="geometry">
+            <mxPoint x="23" y="-11" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b-7inv9fnYbKglBac_pC-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Command&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ execute()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="560" y="410" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="b-7inv9fnYbKglBac_pC-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Invoker&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ storeCommand(cmd:Command)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ execute()&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="420" y="410" width="120" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="xMWlbs6XOlkTLNE3Z1Rz" name="Pagina-7">
+    <mxGraphModel dx="1050" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="AQszk6yhvOGfud7bVyFk-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Fase 7: Creazione della GUI&lt;/h1&gt;&lt;p&gt;Riferimento:&amp;nbsp;https://www.youtube.com/watch?v=ufsUqYuV4YI&amp;amp;list=PLbVQjP43o18AumovahkQPw5hnrrl48ynt&amp;amp;pp=iAQB&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="80" y="80" width="680" height="120" as="geometry" />
         </mxCell>
       </root>

@@ -1,4 +1,4 @@
-package organigramma;
+package organigramma.main;
 
 public class VisitorXML implements Visitor {
 

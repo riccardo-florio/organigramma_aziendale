@@ -1,4 +1,4 @@
-package organigramma;
+package organigramma.main;
 
 import java.util.LinkedList;
 import java.util.List;

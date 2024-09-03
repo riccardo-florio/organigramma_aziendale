@@ -1,4 +1,4 @@
-package organigramma;
+package organigramma.main;
 
 import java.util.NoSuchElementException;
 import java.util.Stack;

@@ -1,4 +1,4 @@
-package organigramma;
+package organigramma.main;
 
 public interface Visitor {
     String visitUnita(Unita u);
