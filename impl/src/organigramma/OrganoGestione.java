@@ -1,17 +1,16 @@
 package organigramma;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class OrganoGestione implements UnitaIF {
     private String nome;
     private UnitaIF.Tipologia tipologia;
-    private List<UnitaIF> children;
+    private Map<Dipendente, String> dipendenti;
 
     public OrganoGestione(String nome, UnitaIF.Tipologia tipologia) {
         this.nome = nome;
         this.tipologia = tipologia;
-        children = new LinkedList<>();
+        dipendenti = new HashMap<>();
     }//Costruttore
 
     public Tipologia getTipologia() {
@@ -60,5 +59,19 @@ public class OrganoGestione implements UnitaIF {
     public String accept(Visitor v) {
         return v.visitOrganoGestione(this);
     }//accept
+
+    // DIPENDENTI
+    public void addDipendente(Dipendente d, String ruolo) {
+        if( !dipendenti.containsKey(d) || !dipendenti.get(d).equals(ruolo) )
+            dipendenti.put(d, ruolo);
+    }//addDipendente
+
+    public void removeDipendente(Dipendente d) {
+        dipendenti.remove(d);
+    }//removeDipendente
+
+    public Set<Dipendente> getDipendenti() {
+        return new HashSet<>(dipendenti.keySet());
+    }//getDipendenti
 
 }//OrganoGestione

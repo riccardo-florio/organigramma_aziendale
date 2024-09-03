@@ -1,12 +1,19 @@
 package organigramma;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
 public class Unita implements UnitaIF {
     private String nome;
     private Tipologia tipologia;
+    private Map<Dipendente, String> dipendenti;
 
     public Unita(String nome, Tipologia tipologia) {
         this.nome = nome;
         this.tipologia = tipologia;
+        dipendenti = new HashMap<>();
     }//Costruttore
 
 
@@ -48,5 +55,19 @@ public class Unita implements UnitaIF {
     public String accept(Visitor v) {
         return v.visitUnita(this);
     }//accept
+
+    // DIPENDENTI
+    public void addDipendente(Dipendente d, String ruolo) {
+        if( !dipendenti.containsKey(d) || !dipendenti.get(d).equals(ruolo) )
+            dipendenti.put(d, ruolo);
+    }//addDipendente
+
+    public void removeDipendente(Dipendente d) {
+        dipendenti.remove(d);
+    }//removeDipendente
+
+    public Set<Dipendente> getDipendenti() {
+        return new HashSet<>(dipendenti.keySet());
+    }//getDipendenti
 
 }//Unita
