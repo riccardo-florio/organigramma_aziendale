@@ -5,11 +5,13 @@ import java.util.*;
 public class OrganoGestione implements UnitaIF {
     private String nome;
     private UnitaIF.Tipologia tipologia;
+    private List<UnitaIF> children;
     private Map<Dipendente, String> dipendenti;
 
     public OrganoGestione(String nome, UnitaIF.Tipologia tipologia) {
         this.nome = nome;
         this.tipologia = tipologia;
+        children = new LinkedList<>();
         dipendenti = new HashMap<>();
     }//Costruttore
 

@@ -9,7 +9,6 @@ public interface UnitaIF {
     enum Tipologia {DIREZIONE, SETTORE, UFFICIO, SEZIONE};
 
     // Composite pattern IF
-    List<UnitaIF> children = new LinkedList<>();
     String getNome();
     void setNome(String nome);
     void addChild(UnitaIF unita);

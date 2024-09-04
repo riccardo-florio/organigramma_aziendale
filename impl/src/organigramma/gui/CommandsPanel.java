@@ -1,6 +1,7 @@
 package organigramma.gui;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class CommandsPanel extends JPanel {
@@ -14,5 +15,6 @@ public class CommandsPanel extends JPanel {
         add(btnApriOrganigramma);
         add(btnNuovoOrganigramma);
         setLayout(new FlowLayout(FlowLayout.LEFT));
+        setBorder(new EmptyBorder(20, 20, 20, 20));
     }//Costruttore
 }//Commands

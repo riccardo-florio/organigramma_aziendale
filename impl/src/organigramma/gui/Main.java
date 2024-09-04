@@ -1,5 +1,8 @@
 package organigramma.gui;
 
+import organigramma.main.OrganoGestione;
+import organigramma.main.UnitaIF;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -7,7 +10,6 @@ public class Main extends JFrame {
     public Main() {
         super("Organigramma Aziendale Builder");
         setSize(700, 500);
-        setVisible(true);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -16,6 +18,7 @@ public class Main extends JFrame {
         getContentPane().add(pnlNord, BorderLayout.NORTH);
         getContentPane().add(pnlCenter, BorderLayout.CENTER);
 
+        setVisible(true);
     }//Costruttore
 
     public static void main(String[] args) {
