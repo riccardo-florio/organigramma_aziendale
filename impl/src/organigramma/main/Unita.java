@@ -16,6 +16,9 @@ public class Unita implements UnitaIF {
         dipendenti = new HashMap<>();
     }//Costruttore
 
+    public Tipologia getTipologia() {
+        return tipologia;
+    }//getTipologia
 
     // COMPOSITE PATTERN
     @Override
@@ -53,7 +56,7 @@ public class Unita implements UnitaIF {
 
     // VISITOR PATTERN
     @Override
-    public String accept(Visitor v) {
+    public <T> T accept(Visitor<T> v) {
         return v.visitUnita(this);
     }//accept
 

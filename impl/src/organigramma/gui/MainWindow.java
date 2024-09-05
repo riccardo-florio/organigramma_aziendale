@@ -6,15 +6,18 @@ import organigramma.main.UnitaIF;
 import javax.swing.*;
 import java.awt.*;
 
-public class Main extends JFrame {
-    public Main() {
+public class MainWindow extends JFrame {
+    public MainWindow() {
         super("Organigramma Aziendale Builder");
         setSize(700, 500);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JPanel pnlNord = new CommandsPanel();
-        JPanel pnlCenter = new ViewerPanel();
+        // Creo un organo di gestione iniziale vuoto
+        UnitaIF root = new OrganoGestione("Root", UnitaIF.Tipologia.DIREZIONE);
+
+        JPanel pnlNord = new CommandsPanel(root);
+        JPanel pnlCenter = new ViewerPanel(this, root);
         getContentPane().add(pnlNord, BorderLayout.NORTH);
         getContentPane().add(pnlCenter, BorderLayout.CENTER);
 
@@ -22,6 +25,6 @@ public class Main extends JFrame {
     }//Costruttore
 
     public static void main(String[] args) {
-        new Main();
+        new MainWindow();
     }//main
 }//Main

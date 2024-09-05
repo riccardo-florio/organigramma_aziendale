@@ -63,7 +63,7 @@ public class OrganoGestione implements UnitaIF {
 
     // VISITOR PATTERN
     @Override
-    public String accept(Visitor v) {
+    public <T> T accept(Visitor<T> v) {
         return v.visitOrganoGestione(this);
     }//accept
 

@@ -1,6 +1,6 @@
 package organigramma.main;
 
-public interface Visitor {
-    String visitUnita(Unita u);
-    String visitOrganoGestione(OrganoGestione og);
+public interface Visitor<T> {
+    T visitUnita(Unita u);
+    T visitOrganoGestione(OrganoGestione og);
 }//Visitor

@@ -2,11 +2,12 @@ package organigramma.main;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 public interface UnitaIF {
     enum Tipologia {DIREZIONE, SETTORE, UFFICIO, SEZIONE};
+
+    Tipologia getTipologia();
 
     // Composite pattern IF
     String getNome();
@@ -37,7 +38,7 @@ public interface UnitaIF {
     Iterator<UnitaIF> iterator();
 
     // Visitor pattern IF
-    String accept(Visitor v);
+    <T> T accept(Visitor<T> v);
 
     // Dipendenti
     void addDipendente(Dipendente d, String ruolo);
