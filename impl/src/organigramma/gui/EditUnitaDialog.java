@@ -102,7 +102,40 @@ public class EditUnitaDialog extends JDialog {
             new AddDipendenteDialog(parent, unitaCorrente, root.accept(new VisitorListDipendenti()));
         });//btnAddDipendente
 
+        btnDeleteUnita.addActionListener(e -> {
+            int reply = JOptionPane.showConfirmDialog(EditUnitaDialog.this,
+                    "Sicuro di voler eliminare l'unità corrente? Verranno eliminati tutti i \n" +
+                            "dipendenti al suo interno e, eventualmente, tutte le sue sotto-unità.",
+                    "Confermare scelta", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION) {
+                if (root != unitaCorrente) {
+                    UnitaIF padre = trovaPadre(root, unitaCorrente);
+                    if (padre instanceof OrganoGestione){
+                        padre.removeChild(unitaCorrente);
+                        dispose();
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(EditUnitaDialog.this,
+                            "Non puoi eliminare l'unità radice.", "Errore", JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+
     }//initListeners
+
+    private UnitaIF trovaPadre(UnitaIF root, UnitaIF target) {
+        Iterator<UnitaIF> iterator = new DepthFirstIterator(root);
+        while (iterator.hasNext()) {
+            UnitaIF current = iterator.next();
+            if (current instanceof OrganoGestione) {
+                OrganoGestione org = (OrganoGestione) current;
+                if (org.getChildren().contains(target)) {
+                    return current; // Questo è il padre dell'unità target
+                }
+            }
+        }
+        return null; // Nessun padre trovato
+    }//trovaPadre
 
     // INNER CLASS
     private class ElencoDipendenti extends JPanel implements Observer {
