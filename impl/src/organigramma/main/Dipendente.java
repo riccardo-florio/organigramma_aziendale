@@ -27,10 +27,7 @@ public class Dipendente {
 
     @Override
     public String toString() {
-        return "Dipendente{" +
-                "nome='" + nome + '\'' +
-                ", matricola=" + matricola +
-                '}';
+        return "Nome: " + nome + ", Matricola: " + matricola;
     }//toString
 
     @Override

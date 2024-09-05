@@ -132,6 +132,7 @@ public class ViewerPanel extends JPanel implements Observer {
     }//getUnitByName
 
     private void addDoubleClickListener() {
+
         graphComponent.getGraphControl().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
@@ -143,7 +144,7 @@ public class ViewerPanel extends JPanel implements Observer {
                         String cellValue = (String) cell.getValue();
                         UnitaIF unita = getUnitByName(cellValue);
                         if (unita != null)
-                            new EditUnitaWindow(mainWindow, unita);
+                            new EditUnitaDialog(mainWindow, unita, root);
                     }
                 }
             }

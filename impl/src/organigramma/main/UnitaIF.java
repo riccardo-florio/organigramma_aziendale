@@ -2,6 +2,7 @@ package organigramma.main;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 
 public interface UnitaIF {
@@ -44,4 +45,6 @@ public interface UnitaIF {
     void addDipendente(Dipendente d, String ruolo);
     void removeDipendente(Dipendente d);
     Set<Dipendente> getDipendenti();
+    Map<Dipendente, String> getDipendentiERuoli();
+
 }//UnitaIF

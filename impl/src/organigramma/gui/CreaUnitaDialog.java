@@ -10,18 +10,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CreaUnitaDialog extends JDialog {
-    private UnitaIF root;
+    private UnitaIF unitaCorrente;
     private JTextField nomeField;
     private JComboBox<UnitaIF.Tipologia> tipologiaCombo;
     private JComboBox<String> tipoCombo;
     private JButton annullaButton;
     private JButton creaButton;
 
-    public CreaUnitaDialog(Frame parent, UnitaIF root) {
+    public CreaUnitaDialog(Frame parent, UnitaIF unitaCorrente) {
         super(parent, "Crea sotto-unità", true); // Dialogo modale
-        this.root = root;
+        this.unitaCorrente = unitaCorrente;
         init();
         setLocationRelativeTo(parent);
+        setVisible(true);
     }//Costruttore
 
     private void init() {
@@ -96,9 +97,9 @@ public class CreaUnitaDialog extends JDialog {
                 }
 
                 if (tipo.equals("Unità")){
-                    root.addChild(new Unita(nome, tipologia));
+                    unitaCorrente.addChild(new Unita(nome, tipologia));
                 } else {
-                    root.addChild(new OrganoGestione(nome, tipologia));
+                    unitaCorrente.addChild(new OrganoGestione(nome, tipologia));
                 }
 
                 // Chiudi il dialogo

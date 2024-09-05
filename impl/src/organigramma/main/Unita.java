@@ -77,4 +77,8 @@ public class Unita implements UnitaIF {
         return new HashSet<>(dipendenti.keySet());
     }//getDipendenti
 
+    public Map<Dipendente, String> getDipendentiERuoli() {
+        return new HashMap<>(dipendenti);
+    }//getDipendentiRuoli
+
 }//Unita
