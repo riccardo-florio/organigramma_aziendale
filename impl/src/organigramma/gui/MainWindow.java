@@ -16,8 +16,8 @@ public class MainWindow extends JFrame {
         // Creo un organo di gestione iniziale vuoto
         UnitaIF root = new OrganoGestione("Root", UnitaIF.Tipologia.DIREZIONE);
 
-        JPanel pnlNord = new CommandsPanel(root);
-        JPanel pnlCenter = new ViewerPanel(this, root);
+        ViewerPanel pnlCenter = new ViewerPanel(this, root);
+        JPanel pnlNord = new CommandsPanel(root, pnlCenter);
         getContentPane().add(pnlNord, BorderLayout.NORTH);
         getContentPane().add(pnlCenter, BorderLayout.CENTER);
 

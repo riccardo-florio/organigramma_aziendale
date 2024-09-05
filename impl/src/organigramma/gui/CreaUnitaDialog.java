@@ -1,8 +1,6 @@
 package organigramma.gui;
 
-import organigramma.main.OrganoGestione;
-import organigramma.main.Unita;
-import organigramma.main.UnitaIF;
+import organigramma.main.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -91,8 +89,18 @@ public class CreaUnitaDialog extends JDialog {
                 String tipo = (String) tipoCombo.getSelectedItem();
                 UnitaIF.Tipologia tipologia = (UnitaIF.Tipologia) tipologiaCombo.getSelectedItem();
 
-                if (nome.equals("")) {
-                    new JDialog(CreaUnitaDialog.this, "Inserire un nome per poter continuare");
+                if (nome.trim().equals("") || nome == null) {
+                    JOptionPane.showMessageDialog(CreaUnitaDialog.this,
+                            "Inserire un nome per poter continuare", "Errore",
+                            JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                // Controlla se esiste già un'unità con lo stesso nome
+                if (esisteUnitaConNome(unitaCorrente, nome)) {
+                    JOptionPane.showMessageDialog(CreaUnitaDialog.this,
+                            "Esiste già un'unità con questo nome", "Errore",
+                            JOptionPane.ERROR_MESSAGE);
                     return;
                 }
 
@@ -107,4 +115,16 @@ public class CreaUnitaDialog extends JDialog {
             }
         });
     }//initListeners
+
+    private boolean esisteUnitaConNome(UnitaIF root, String nome) {
+        Iterator<UnitaIF> iterator = new DepthFirstIterator(root);
+        while (iterator.hasNext()) {
+            UnitaIF unita = iterator.next();
+            if (unita.getNome().equals(nome)) {
+                return true;
+            }
+        }
+        return false;
+    }//esisteUnitaConNome
+
 }//CreaUnitaDialog
