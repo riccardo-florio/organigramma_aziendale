@@ -109,7 +109,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="zwyY6L2nezKvZ6c99CWX" name="Fase 2 - Pattern Observer">
-    <mxGraphModel dx="875" dy="518" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1235" dy="731" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -142,7 +142,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="dv5olnQWxSan3haJfNEE-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.511;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;startArrow=open;startFill=0;dashed=1;entryPerimeter=0;" parent="1" source="wFXLG3sIARUn2MWzjP7r-26" target="cPAPYcfW4mj2ZW5Q-SIM-6" edge="1">
+        <mxCell id="dv5olnQWxSan3haJfNEE-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.511;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;endArrow=none;endFill=0;startArrow=block;startFill=0;dashed=1;entryPerimeter=0;" parent="1" source="wFXLG3sIARUn2MWzjP7r-26" target="cPAPYcfW4mj2ZW5Q-SIM-6" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="623" y="490" as="sourcePoint" />
             <mxPoint x="638" y="740" as="targetPoint" />
@@ -195,7 +195,7 @@
             <mxPoint x="20" y="-1" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="cPAPYcfW4mj2ZW5Q-SIM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;dashed=1;" edge="1" parent="1" source="cPAPYcfW4mj2ZW5Q-SIM-2" target="wFXLG3sIARUn2MWzjP7r-26">
+        <mxCell id="cPAPYcfW4mj2ZW5Q-SIM-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;endFill=0;dashed=1;" edge="1" parent="1" source="cPAPYcfW4mj2ZW5Q-SIM-2" target="wFXLG3sIARUn2MWzjP7r-26">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="420" y="680" />
@@ -338,7 +338,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="K_oU_XFY5ItpfsTypdc4" name="Parte 4 - Pattern Visitor">
-    <mxGraphModel dx="2100" dy="1242" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="621" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
