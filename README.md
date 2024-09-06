@@ -27,12 +27,16 @@ Organigramma Aziendale Builder è un'applicazione Java che consente di creare, m
    git clone https://github.com/riccardo-florio/organigramma_aziendale.git
    ```
 
-2. Importa il progetto in un IDE come IntelliJ IDEA o Eclipse.
+2. Importa il progetto in un IDE come IntelliJ IDEA o Eclipse. Procedura consigliata:
+   
+   - Scarica Java 21 (https://www.oracle.com/java/technologies/downloads/#jdk21-windows).
+   - Apri la cartella "impl" con IntelliJ IDEA.
+   - Seleziona la versione di Java scaricata al punto precedente.
+   - Procedi con i passi successivi.
 
-3. Assicurati di avere le librerie JGraphX nel classpath.
+3. Assicurati di avere le librerie JGraphX nel classpath (puoi saltare questo passaggio se usi IntelliJ IDEA).
 
 4. Esegui il file MainWindow.java per avviare l'applicazione.
-
 
 ## Utilizzo
 
