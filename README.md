@@ -45,3 +45,7 @@ Una volta avviato il programma, puoi:
 - Salvare l'organigramma in formato XML tramite l'opzione "Salva organigramma".
 - Caricare un organigramma salvato tramite "Apri organigramma".
 - Creare un nuovo organigramma selezionando "Nuovo Organigramma".
+
+## Licenza
+
+Questo progetto è distribuito sotto la licenza MIT. Vedi il file `LICENSE` per maggiori informazioni.
