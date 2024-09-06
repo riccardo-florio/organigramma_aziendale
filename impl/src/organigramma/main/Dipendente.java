@@ -1,7 +1,7 @@
 package organigramma.main;
 
 public class Dipendente {
-    public static int cont;
+    private static int cont;
     private String nome;
     private int matricola;
 

@@ -39,21 +39,35 @@ public class CommandsPanel extends JPanel {
         });//btnSalvaOrganigramma
 
         btnApriOrganigramma.addActionListener(e -> {
-            UnitaIF openedRoot = IOManager.apriDaFile();
+            int reply = JOptionPane.showConfirmDialog(null,
+                    "Tutte le modifiche non salvate dell'organigramma\n attuale andranno perse. Continuare?",
+                    "Attenzione", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION) {
 
-            root = openedRoot;
+                UnitaIF openedRoot = IOManager.apriDaFile();
 
-            if (openedRoot != null) {
-                // Aggiorna il root del ViewerPanel e ridisegna il grafo
-                centerPanel.setRoot(openedRoot); // Aggiungi un metodo per aggiornare il root nel ViewerPanel
-                centerPanel.drawGraph(); // Ridisegna il grafo con il nuovo root
+                root = openedRoot;
+                if (openedRoot != null) {
+                    // Aggiorna il root del ViewerPanel e ridisegna il grafo
+                    centerPanel.setRoot(openedRoot);
+                    centerPanel.drawGraph();
+                }
             }
         });//btnApriOrganigramma
 
         btnNuovoOrganigramma.addActionListener(e -> {
-
+            int reply = JOptionPane.showConfirmDialog(null,
+                    "Sicuro di voler creare un nuovo organigramma?\n Tutte le " +
+                            "modifiche non salvate andranno perse.",
+                    "Confermare scelta", JOptionPane.YES_NO_OPTION);
+            if (reply == JOptionPane.YES_OPTION) {
+                UnitaIF newRoot = new OrganoGestione("Root", UnitaIF.Tipologia.DIREZIONE);
+                root = newRoot;
+                centerPanel.setRoot(newRoot);
+                centerPanel.drawGraph();
+            }
         });//btnNuovoOrganigramma
 
-        btnAggiornaGrafico.addActionListener(e -> root.setNome(root.getNome()));//btnAggiornaGrafico
+        btnAggiornaGrafico.addActionListener(e -> centerPanel.drawGraph());//btnAggiornaGrafico
     }//initListeners
 }//Commands
