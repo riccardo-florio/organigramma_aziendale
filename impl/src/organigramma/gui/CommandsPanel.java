@@ -42,7 +42,12 @@ public class CommandsPanel extends JPanel {
             UnitaIF openedRoot = IOManager.apriDaFile();
 
             root = openedRoot;
-            centerPanel.drawGraph();
+
+            if (openedRoot != null) {
+                // Aggiorna il root del ViewerPanel e ridisegna il grafo
+                centerPanel.setRoot(openedRoot); // Aggiungi un metodo per aggiornare il root nel ViewerPanel
+                centerPanel.drawGraph(); // Ridisegna il grafo con il nuovo root
+            }
         });//btnApriOrganigramma
 
         btnNuovoOrganigramma.addActionListener(e -> {

@@ -9,7 +9,7 @@ import java.awt.*;
 public class MainWindow extends JFrame {
     public MainWindow() {
         super("Organigramma Aziendale Builder");
-        setSize(700, 500);
+        setMinimumSize(new Dimension(800,500));
         setLocationRelativeTo(null);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 

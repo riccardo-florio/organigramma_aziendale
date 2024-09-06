@@ -32,16 +32,23 @@ public class ViewerPanel extends JPanel implements Observer {
         this.mainWindow = mainWindow;
         setBorder(new EmptyBorder(10, 10, 10, 10));
 
-        // Costruzione
-        graph = new SimpleDirectedGraph<>(DefaultEdge.class);
-        mxGraph = new mxGraph();
-        parent = mxGraph.getDefaultParent();
         this.root = root;
 
         drawGraph();
     }//Costruttore
 
+    public void setRoot(UnitaIF newRoot) {
+        this.root = newRoot;
+    }//setRoot
+
     public void drawGraph() {
+        removeAll();
+
+        // Costruzione
+        graph = new SimpleDirectedGraph<>(DefaultEdge.class);
+        mxGraph = new mxGraph();
+        parent = mxGraph.getDefaultParent();
+
         // Creazione del grafo dall'organigramma
         buildGraph(root);
 
@@ -63,6 +70,10 @@ public class ViewerPanel extends JPanel implements Observer {
         addDoubleClickListener();
 
         add(graphComponent, BorderLayout.CENTER);
+
+        // Rinfresca il layout del pannello
+        revalidate(); // Ricostruisce il layout con il nuovo grafico
+        repaint(); // Ridipinge il pannello con i nuovi componenti
     }//drawGraph
 
     private void buildGraph(UnitaIF root) {
@@ -132,7 +143,6 @@ public class ViewerPanel extends JPanel implements Observer {
     }//getUnitByName
 
     private void addDoubleClickListener() {
-
         graphComponent.getGraphControl().addMouseListener(new MouseAdapter() {
             @Override
             public void mouseReleased(MouseEvent e) {
@@ -154,20 +164,8 @@ public class ViewerPanel extends JPanel implements Observer {
     // OBSERVER PATTERN
     @Override
     public void update(UnitaIF unita) {
-        // Rimuovi il vecchio componente grafico dal pannello
-        remove(graphComponent);
-
-        // Reset del grafo per evitare duplicati
-        graph = new SimpleDirectedGraph<>(DefaultEdge.class);
-        mxGraph = new mxGraph();
-        parent = mxGraph.getDefaultParent();
-
         // Ricrea il grafo aggiornato
         drawGraph();
-
-        // Rinfresca il layout del pannello
-        revalidate(); // Ricostruisce il layout con il nuovo grafico
-        repaint(); // Ridipinge il pannello con i nuovi componenti
     }// update
 
 }//Viewer
