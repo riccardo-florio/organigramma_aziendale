@@ -1,7 +1,7 @@
 # Organigramma Aziendale Builder
 
 ## Descrizione
-Organigramma Aziendale Builder è un'applicazione Java che consente di creare, modificare e visualizzare organigrammi aziendali in modo semplice e intuitivo. Permette di aggiungere dipendenti, creare unità e organi di gestione, e di salvare e aprire organigrammi in formato XML.
+Organigramma Aziendale Builder è un'applicazione Java che consente di creare, modificare e visualizzare organigrammi aziendali in modo semplice e intuitivo. Permette di aggiungere dipendenti, creare unità e organi di gestione e di salvare e aprire organigrammi in formato XML.
 
 ## Funzionalità
 - Creazione di un nuovo organigramma aziendale.
